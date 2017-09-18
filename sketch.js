@@ -1,5 +1,6 @@
 function setup() {
-	createCanvas(windowWidth, windowHeight);
+	noCanvas();
+	let v = createP('hi')
 }
 
 function draw() {
