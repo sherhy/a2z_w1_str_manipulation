@@ -72,15 +72,15 @@ function prepareText(srcText){
 
 function delWord(){
 	delword = deleteBar.value();
-	let typo = True;
+	let typo = true;
 	for (i = words.length-1; i > -1; i--){
 		// console.log(words[i].div.elt.innerText);
 		if (words[i].div.elt.innerText == delword){
-			typo = False;
+			typo = false;
 			words[i].div.remove();
 		}
 	}
-	if (typo == False){
+	if (typo == false){
 		let finalpoem = finalpoetry.elt.innerText+' '+deleteBar.value();
 		finalpoetry.html(finalpoem);
 	}
