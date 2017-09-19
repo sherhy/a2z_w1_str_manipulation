@@ -36,7 +36,7 @@ function setup() {
 
 	loadStrings('src/shakespeare.txt', prepareText);
 
-	let p2 = createP("add words here");
+	let p2 = createP("add words to shakespeare's SONNET 18");
 	input = createInput('sample');
 	button = createButton('create');
 	finalpoetry = createDiv('');
@@ -46,6 +46,7 @@ function setup() {
 	button.mousePressed(function () {
 		let v = new Word();
 		v.pushword(input.value());
+		input.value('');
 	})
 
 	deleteBar = createInput('deletewords');
