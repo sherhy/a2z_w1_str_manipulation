@@ -73,6 +73,7 @@ function delWord(){
 			words[i].div.remove();
 		}
 	}
+	deleteBar.value("");
 }
 
 function keyPressed() {
