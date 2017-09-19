@@ -4,6 +4,7 @@ let y = 50;
 let input;
 let button;
 let deleteBar;
+let finalpoetry;
 
 class Word {
 	constructor(){
@@ -38,6 +39,10 @@ function setup() {
 	let p2 = createP("add words here");
 	input = createInput('sample');
 	button = createButton('create');
+	finalpoetry = createDiv('');
+	finalpoetry.style('font-family','helvetica');
+	finalpoetry.style('font-size','17px');
+	
 	button.mousePressed(function () {
 		let v = new Word();
 		v.pushword(input.value());
@@ -68,10 +73,16 @@ function prepareText(srcText){
 function delWord(){
 	delword = deleteBar.value();
 	for (i = words.length-1; i > -1; i--){
+		let typo = True;
 		// console.log(words[i].div.elt.innerText);
 		if (words[i].div.elt.innerText == delword){
+			typo = False;
 			words[i].div.remove();
 		}
+	}
+	if !(typo){
+		let finalpoem = finalpoetry.elt.innerText+' '+deleteBar.value();
+		finalpoetry.html(finalpoem);
 	}
 	deleteBar.value("");
 }
