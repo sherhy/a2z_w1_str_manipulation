@@ -6,4 +6,4 @@
 
 refer to screenshot!
 
-demonstration on [github pages](sherhy.github.io/a2z_w1_str_manipulation/)
+demonstration on [github pages](https://sherhy.github.io/a2z_w1_str_manipulation/)
