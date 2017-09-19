@@ -5,3 +5,5 @@
 3. erase words (multiple deletions possible) via deletebar(bottom of screen) and hitting ENTER
 
 refer to screenshot!
+
+[github pages](sherhy.github.io/a2z_w1_str_manipulation/)
