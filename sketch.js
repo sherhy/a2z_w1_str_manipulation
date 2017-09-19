@@ -80,7 +80,7 @@ function delWord(){
 			words[i].div.remove();
 		}
 	}
-	if !(typo){
+	if (!typo){
 		let finalpoem = finalpoetry.elt.innerText+' '+deleteBar.value();
 		finalpoetry.html(finalpoem);
 	}
