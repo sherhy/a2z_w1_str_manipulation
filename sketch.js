@@ -8,7 +8,7 @@ let deleteBar;
 class Word {
 	constructor(){
 		this.x = random(5,windowWidth - 5);
-		this.y = 10;
+		this.y = random(10, windowHeight - 10);
 		this.div = createDiv();
 	}
 
@@ -33,7 +33,7 @@ class Word {
 function setup() {
 	noCanvas();
 
-	
+	loadStrings('src/shakespeare.txt', prepareText);
 
 	let p2 = createP("add words here");
 	input = createInput('sample');
@@ -48,14 +48,21 @@ function setup() {
 	let p1 = createP('input the word you want to delete below and hit ENTER');
 	p1.position(10, windowHeight-90);
 
-	for (i = 0; i < 4; i++){
-		x = 40;
-		let v = new Word();
-		v.pushword('letsgo');
-		
-	}	
+	// for (i = 0; i < 4; i++){
+	// 	x = 40;
+	// 	let v = new Word();
+	// 	v.pushword('letsgo');		
+	// }	
+}
 
-
+function prepareText(srcText){
+	for (line = 0; line < srcText.length; line++){
+		let wrds = srcText[line].split(" ");
+		for (w = 0; w < wrds.length; w++){
+			let v = new Word();
+			v.pushword(wrds[w]);
+		}
+	}
 }
 
 function delWord(){
