@@ -72,8 +72,8 @@ function prepareText(srcText){
 
 function delWord(){
 	delword = deleteBar.value();
+	let typo = True;
 	for (i = words.length-1; i > -1; i--){
-		let typo = True;
 		// console.log(words[i].div.elt.innerText);
 		if (words[i].div.elt.innerText == delword){
 			typo = False;
