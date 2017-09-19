@@ -19,7 +19,7 @@ class Word {
 	}
 
 	update(){
-		this.y += 1.7;
+		this.y += random(1.4,1.7);
 		this.div.position(this.x,this.y);
 
 		if (this.y> windowHeight){
